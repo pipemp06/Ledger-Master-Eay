@@ -16,6 +16,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    color: #fff;
     background-color: #003333;
     padding: 15px;
 }
@@ -27,7 +30,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-links li a {
@@ -112,3 +115,90 @@ body, p, a, li, label {
     height: auto;
 }
 
+/* Estilos generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 10px 0;
+    }
+  
+    .nav-links li {
+      margin: 5px 0;
+    }
+  
+    .auth-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    #banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .banner-image {
+      margin-top: 20px;
+    }
+  
+    .banner-image img {
+      width: 80%;
+      max-width: 250px;
+    }
+  }
+  /* Botón hamburguesa oculto en pantallas grandes */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .auth-buttons a {
+        width: 90%;
+        text-align: center;
+    }
+}
